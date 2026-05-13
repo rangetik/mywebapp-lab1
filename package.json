@@ -1,0 +1,25 @@
+{
+  "name": "mywebapp-lab1",
+  "version": "1.0.0",
+  "description": "**Студент:** Жила Іван\r **Група:** ІМ-42\r **Варіант:** N=11",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rangetik/mywebapp-lab1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rangetik/mywebapp-lab1/issues"
+  },
+  "homepage": "https://github.com/rangetik/mywebapp-lab1#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "pg": "^8.20.0"
+  }
+}
