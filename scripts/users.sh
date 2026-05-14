@@ -3,7 +3,7 @@
 sudo useradd -r -s /usr/sbin/nologin app
 
 sudo useradd -m -s /bin/bash student
-echo "student:student_pass" | sudo chpasswd
+echo "student:12345678" | sudo chpasswd
 sudo usermod -aG sudo student
 echo "11" | sudo tee /home/student/gradebook
 sudo chown student:student /home/student/gradebook

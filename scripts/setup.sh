@@ -7,9 +7,7 @@ echo "Початок розгортання"
 chmod +x scripts/*.sh
 
 ./scripts/packages.sh
-
 ./scripts/users.sh
-
 ./scripts/database.sh
 
 sudo mkdir -p /opt/mywebapp
@@ -31,6 +29,6 @@ sudo systemctl enable --now mywebapp.socket
 sudo cp config/nginx.conf /etc/nginx/sites-available/mywebapp
 sudo ln -sf /etc/nginx/sites-available/mywebapp /etc/nginx/sites-enabled/
 sudo rm -f /etc/nginx/sites-enabled/default
-sudo systemctl restart nginx [cite: 77]
+sudo systemctl restart nginx
 
 echo "Розгоратання завершено успішно"
