@@ -14,7 +14,7 @@ async function migrate() {
     console.log("Початок міграції");
     await pool.query(createTableQuery);
     console.log("Міграція успішна: таблиця готова до роботи.");
-  } catch (err) {\
+  } catch (err) {
     console.error("Помилка під час міграції:", err.message);
     process.exit(1);
   } finally {
