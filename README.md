@@ -1,4 +1,4 @@
-````markdown
+
 # Лабораторна робота 1
 
 Комплексна система інвентаризації з автоматизованим розгортанням на базі **Ubuntu Server**, **Node.js**, **Nginx** та **PostgreSQL**.
@@ -133,4 +133,4 @@ sudo tail -n 5 /var/log/nginx/access.log
 ```bash
 ps aux | grep node
 ```
-````
+
