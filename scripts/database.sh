@@ -2,7 +2,7 @@
 
 DB_NAME="mywebapp"
 DB_USER="app"
-DB_PASS="password123"
+DB_PASS="12345678"
 
 sudo -u postgres psql -c "CREATE DATABASE $DB_NAME;"
 sudo -u postgres psql -c "CREATE USER $DB_USER WITH ENCRYPTED PASSWORD '$DB_PASS';"
