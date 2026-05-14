@@ -78,7 +78,7 @@ cd mywebapp-lab1
 
 2. Надайте права на виконання та запустіть скрипт:
 ```bash
-chmod +x setup.sh && sudo ./setup.sh
+chmod +x scripts/setup.sh && sudo ./scripts/setup.sh
 ```
 
 ---
@@ -124,9 +124,9 @@ sudo apt update                 # Буде відмовлено
 sudo -u student cat /home/student/gradebook
 ```
 
-**Nginx Logs:** Перевірка, що проксі-сервер фіксує запити:
+**Nginx Status:** Перевірка, що Nginx активний та завантажив конфігурацію:
 ```bash
-sudo tail -n 5 /var/log/nginx/access.log
+sudo nginx -t && sudo systemctl status nginx
 ```
 
 **Власник процесу:** Перевірка, що застосунок запущено саме від імені користувача `app`:
