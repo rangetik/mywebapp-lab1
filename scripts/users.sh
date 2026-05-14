@@ -1,19 +1,19 @@
 #!/bin/bash
 
-sudo useradd -r -s /usr/sbin/nologin app
+sudo id -u app &>/dev/null || sudo useradd -r -s /usr/sbin/nologin app
 
-sudo useradd -m -s /bin/bash student
+sudo id -u student &>/dev/null || sudo useradd -m -s /bin/bash student
 echo "student:12345678" | sudo chpasswd
 sudo usermod -aG sudo student
 echo "11" | sudo tee /home/student/gradebook
 sudo chown student:student /home/student/gradebook
 
-sudo useradd -m -s /bin/bash teacher
+sudo id -u teacher &>/dev/null || sudo useradd -m -s /bin/bash teacher
 echo "teacher:12345678" | sudo chpasswd 
 sudo chage -d 0 teacher 
 sudo usermod -aG sudo teacher
 
-sudo useradd -m -s /bin/bash operator
+sudo id -u operator &>/dev/null || sudo useradd -m -s /bin/bash operator
 echo "operator:12345678" | sudo chpasswd
 sudo chage -d 0 operator
 

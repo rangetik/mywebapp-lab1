@@ -24,7 +24,12 @@ cd -
 sudo cp config/systemd/mywebapp.socket /etc/systemd/system/
 sudo cp config/systemd/mywebapp.service /etc/systemd/system/
 sudo systemctl daemon-reload
-sudo systemctl enable --now mywebapp.socket
+
+sudo systemctl stop mywebapp.socket || true
+sudo systemctl disable mywebapp.socket || true
+
+sudo systemctl enable mywebapp.service
+sudo systemctl restart mywebapp.service
 
 sudo cp config/nginx.conf /etc/nginx/sites-available/mywebapp
 sudo ln -sf /etc/nginx/sites-available/mywebapp /etc/nginx/sites-enabled/
